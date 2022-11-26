@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a1612cea31.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 1000px;
+            /* margin: 0; */
+        }
+        nav {
+            position: fixed;
+            width: 100%;
+            height: min-content;
+            display: flex;
+            background-color: darkblue;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo {
+            text-decoration: none;
+            color: whitesmoke;
+
+            /* display: block; */
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        ul li {
+            margin: 10px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+        .bar {
+            display: none;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .logo {
+                position: absolute;
+            }
+            nav ul .ulist {
+                display: none;
+            }
+            
+            nav ul .bar {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 0;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            nav ul .responsive {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: blueviolet;
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h2 class="logo">CodeIn</h2>
+        <!-- <a href="#" class="logo">CodeIn</a> -->
+        <ul  id="listNav" class="ulist">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Contact</a></li>
+            <li class="bar"><a href="#" onclick="btnBar()"><i class="fa-solid fa-bars"></i></a></li>
+        </ul>
+    </nav>
+    <script>
+        function btnBar() {
+            let listNav = document.getElementById("listNav");
+            if (listNav.className === "ulist") {
+                listNav.className += " responsive";
+                console.log('test');
+            } else {
+                listNav.className  = "ulist"
+            }
+        }
+    </script>
+</body>
+</html>

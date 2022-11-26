@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: gray;
+            /* margin: 50px auto; */
+            padding: 5px;
+            display: grid;
+            grid-template-areas: "header header"
+                                 "aside main"
+                                 "nav main"
+                                 "footer footer";
+            grid-template-columns: 1fr 1.5fr;
+            grid-template-rows: 0.5fr 1fr 1.5fr;
+        }
+
+        header {
+            grid-area: header;
+            background-color: crimson;
+        }
+
+        aside {
+            grid-area: aside;
+            padding: 80px 0;
+            background-color: blueviolet;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: forestgreen;
+        }
+
+        main {
+            grid-area: main;
+            align-items: center;
+            background-color: darkcyan;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: peru;
+            padding: 12px;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="center">HEADER</header>
+        <aside class="center">ASIDE</aside>
+        <nav class="center">NAV</nav>
+        <main class="center">MAIN</main>
+        <footer class="center">FOOTER</footer>
+    </div>
+</body>
+</html>

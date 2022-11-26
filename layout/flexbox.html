@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: whitesmoke;
+        }
+        
+        header {
+            background-color: crimson;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h2 {
+            /* background-color: aqua; */
+            text-align: center;
+        }
+
+        aside {
+            background-color: blueviolet;
+            height: 100px;
+            display: flex;
+            width: 30%;
+            /* float: left; */
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            background-color: rgba(255, 127, 80, 0.651);
+            position: relative;
+            /* margin-top: 100px; */
+            height: 200px;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* float: left; */
+        }
+
+        main {
+            background-color: cornflowerblue;
+            height: 300px;
+            width: 70%;
+            right: 0;
+            position: absolute;
+            top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer {
+            background-color: darkslategray;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>HEADER</h2>
+    </header>
+
+    <aside>
+        <h2>ASIDE</h2>
+    </aside>
+
+    <main>
+        <h2>MAIN</h2>
+    </main>
+
+    <nav>
+        <h2>NAV</h2>
+    </nav>
+
+    <footer>
+        <h2>FOOTER</h2>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .kotak1, .kotak2, .kotak3 {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+        }
+
+        .kotak1 {
+            background-color: lightseagreen;
+        }
+
+        .kotak2 {
+            background-color: crimson;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .kotak3 {
+            background-color: magenta;
+        }
+
+        .container {
+            width: 450px;
+            height: 450px;
+            border: 2px solid black;
+            margin: 50px auto;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kotak1"></div>
+        <div class="kotak2"></div>
+        <div class="kotak3"></div>
+    </div>
+</body>
+</html>

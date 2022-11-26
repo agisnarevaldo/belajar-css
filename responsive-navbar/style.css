@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    height: 1000px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #0C0F15;
+}
+nav {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-around;
+    /* padding: 0 20px; */
+    position: fixed;
+    width: 100%;
+    gap: 20%;
+}
+
+nav .logo {
+    color: #BBBBBB;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    list-style: none;
+    /* background-color: aqua; */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav ul li a:hover {
+    color: #038CF5;
+    border-bottom: 1px solid #038CF5;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    height: 17px;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    left: -7px;
+    top: -4px;
+    opacity: 0.5;
+}
+
+.menu-toggle span {
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: whitesmoke;
+}
+
+/* Hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+    background-color: red;
+}
+/* Mobile */
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: none;
+    }
+}
