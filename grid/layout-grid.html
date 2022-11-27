@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouting with Grid</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: 1fr 2fr auto;
+            grid-template-rows: 1fr 2fr auto;
+            grid-template-areas: 
+                "header header header header"
+                "nav main main aside"
+                "footer footer footer footer";
+        }
+        .grid-item {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        header {
+            grid-area: header;
+            background-color: blue;
+        }
+        nav {
+            grid-area: nav;
+            background-color: blueviolet;
+        }
+        aside {
+            grid-area: aside;
+            background-color: coral;
+        }
+        main {
+            grid-area: main;
+            background-color: chartreuse;
+        }
+        footer {
+            grid-area: footer;
+            background-color: darkslategray;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .container {
+                grid-template-columns: auto 1fr;
+                grid-template-rows: 1fr 1fr 2fr auto;
+                grid-template-areas: 
+                "header header header header"
+                "nav nav nav aside"
+                "main main main aside"
+                "footer footer footer footer";
+            }
+        }
+
+        @media screen and (max-width: 667px) {
+            .container {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr 1fr 2fr 1fr;
+            grid-template-areas: 
+                "header header header header"
+                "nav nav aside aside"
+                "main main main main"
+                "footer footer footer footer";
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="grid-item">Header</header>
+        <nav class="grid-item">Nav</nav>
+        <aside class="grid-item">Sidebar</aside>
+        <main class="grid-item">Main Content</main>
+        <footer class="grid-item">Footer</footer>
+    </div>
+</body>
+</html>
